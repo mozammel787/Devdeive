@@ -9,7 +9,7 @@ import { FaChartLine, FaRegClock } from "react-icons/fa6";
 import { MdCalendarToday } from "react-icons/md";
 import { GrLanguage } from "react-icons/gr";
 import { RiGroupLine } from "react-icons/ri";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const SingleCourse = () => {
   const course = useLoaderData();
@@ -28,6 +28,7 @@ const SingleCourse = () => {
     author,
     category,
     authorPhoto,
+    _id
   } = course;
 
   const [activeTabIndex, setActiveTabIndex] = useState("Overview");
@@ -208,7 +209,9 @@ const SingleCourse = () => {
               </div>
 
               <button className="btn btn-primary w-full mt-5">
-                Enroll Course
+                  <Link to={`/dashboard/courses/payment/${_id}`} >   Enroll Course
+                  </Link>
+             
               </button>
             </div>
           </div>

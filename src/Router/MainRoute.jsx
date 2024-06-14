@@ -12,67 +12,90 @@ import MyCourses from "../Dashboard/MyCourses";
 import CourseEdit from "../Dashboard/CourseEdit";
 import MyProfile from "../Dashboard/MyProfile";
 import EditProfile from "../Dashboard/EditProfile";
-
+import Payment from "../Payment/Payment";
+import PaymentComplete from "../Payment/PaymentComplete";
+import PageNotFount from "../Pages/PageNotFount";
 
 export const MainRoute = createBrowserRouter([
-    {
-        path:"/",
-        element:<MainLayout/>,
-        children:[
-            {
-                path:"/",
-                element:<Home/>
-            },
-            {
-                path:"/Signin",
-                element:<LogIn/>
-            },
-            {
-                path:"/Signup",
-                element:<Registration/>
-            },
-            {
-                path:"/courses",
-                element:<AllCourses/>
-            },
-            {
-                path:"/courses/:id",
-                element:<SingleCourse/>,
-                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
-            },
-        ]
-    },{
-        path:"/dashboard",
-        element:<PrivetRouter><PrivateLayout/></PrivetRouter>,
-        children:[
-            {
-                path:"",
-                element: <MyProfile/>
-            },
-            {
-                path:"edit-profile",
-                element: <EditProfile/>
-            },
-            {
-                path:"search",
-                element: <AllCourses/>
-            },
-           
-            {
-                path:"add-courses",
-                element: <AddCourses/>
-            },
-            {
-                path:"my-courses",
-                element: <MyCourses/>
-            },
-            {
-                path:"courses/edit/:id",
-                element:<CourseEdit/>,
-                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
-            },
-        
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <PageNotFount />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/Signin",
+        element: <LogIn />,
+      },
+      {
+        path: "/Signup",
+        element: <Registration />,
+      },
+      {
+        path: "/courses",
+        element: <AllCourses />,
+      },
+      {
+        path: "/courses/:id",
+        element: <SingleCourse />,
+        loader: ({ params }) =>
+          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivetRouter>
+        <PrivateLayout />
+      </PrivetRouter>
+    ),
+    errorElement: <PageNotFount />,
+    children: [
+      {
+        path: "",
+        element: <MyProfile />,
+      },
+      {
+        path: "edit-profile",
+        element: <EditProfile />,
+      },
+      {
+        path: "search",
+        element: <AllCourses />,
+      },
 
+      {
+        path: "add-courses",
+        element: <AddCourses />,
+      },
+      {
+        path: "my-courses",
+        element: <MyCourses />,
+      },
+      {
+        path: "courses/edit/:id",
+        element: <CourseEdit />,
+        loader: ({ params }) =>
+          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+      },
+      {
+        path: "courses/payment/:id",
+        element: <Payment></Payment>,
+        loader: ({ params }) =>
+            fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+      },
+    ],
+  },
+  {
+    path: "/*",
+    element: <PageNotFount />,
+  },
+  {
+    path: "/paymentcomplete",
+    element: <PaymentComplete />,
+  },
+]);

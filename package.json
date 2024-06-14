@@ -12,6 +12,8 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.4.2",
     "@ckeditor/ckeditor5-react": "^7.0.0",
+    "@stripe/react-stripe-js": "^2.7.1",
+    "@stripe/stripe-js": "^3.5.0",
     "@triyanox/react-video": "^0.1.9",
     "axios": "^1.7.2",
     "firebase": "^10.12.2",

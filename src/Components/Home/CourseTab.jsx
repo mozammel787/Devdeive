@@ -5,29 +5,15 @@ import { FaStar } from "react-icons/fa6";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const cat = [
-  {
-    category: "HTML",
-  },
-  {
-    category: "React",
-  },
-  {
-    category: "PHP",
-  },
-  {
-    category: "Node",
-  },
-];
 
 const CourseTab = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState("HTML");
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/course");
+        const response = await axios.get("https://devdrive-server.onrender.com/course");
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -53,25 +39,52 @@ const CourseTab = () => {
         
       </div>
       <div className="flex justify-between space-x-3 p-4 bg-neutral rounded-2xl">
-        <div className="flex space-x-3 ">
-          {/* Loop through tab data and render button for each. */}
-          {cat.map((tab, idx) => {
-            return (
-              <button
-                key={idx}
-                className={`font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl ${
-                  idx === activeTabIndex
-                    ? "text-white bg-gradient-to-r from-primary to-[#41ce79]  "
-                    : "text-gray-600 "
-                }`}
-                // Change the active tab on click.
-                onClick={() => setActiveTabIndex(idx)}
-              >
-                {tab.category}
-              </button>
-            );
-          })}
-        </div>
+      <div className="flex items-center space-x-3  ">
+            <button
+              className={`font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl ${
+                "HTML" === activeTabIndex
+                  ? "text-white bg-gradient-to-r from-primary to-[#41ce79]  "
+                  : "text-gray-600 "
+              }`}
+              // Change the active tab on click.
+              onClick={() => setActiveTabIndex("HTML")}
+            >
+              HTML
+            </button>
+            <button
+              className={`font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl ${
+                "React" === activeTabIndex
+                  ? "text-white bg-gradient-to-r from-primary to-[#41ce79]  "
+                  : "text-gray-600 "
+              }`}
+              // Change the active tab on click.
+              onClick={() => setActiveTabIndex("React")}
+            >
+              React
+            </button>
+            <button
+              className={`font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl ${
+                "PHP" === activeTabIndex
+                  ? "text-white bg-gradient-to-r from-primary to-[#41ce79]  "
+                  : "text-gray-600 "
+              }`}
+              // Change the active tab on click.
+              onClick={() => setActiveTabIndex("PHP")}
+            >
+              PHP
+            </button>
+            <button
+              className={`font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl ${
+                "Node" === activeTabIndex
+                  ? "text-white bg-gradient-to-r from-primary to-[#41ce79]  "
+                  : "text-gray-600 "
+              }`}
+              // Change the active tab on click.
+              onClick={() => setActiveTabIndex("Node")}
+            >
+              Node
+            </button>
+          </div>
         <button className=" font-semibold text-xl  px-8 py-4 transition-colors duration-300 rounded-2xl text-white bg-gradient-to-r from-primary to-[#41ce79]">
           <Link to={"courses"}>  See All Courses</Link>
         
@@ -81,7 +94,7 @@ const CourseTab = () => {
       {/* Show active tab content. */}
       <div className="py-4">
         <TabContent
-          activeCategory={course[activeTabIndex]?.category}
+          activeCategory={activeTabIndex}
           tabsData={course}
         ></TabContent>
       </div>

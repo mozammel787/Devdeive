@@ -19,7 +19,7 @@ const PrivetCard = ({ course }) => {
   const handelDelete = async () => {
     const token = localStorage.getItem("token");
 
-    await fetch(`http://localhost:5000/course/delete/${_id}`, {
+    await fetch(`https://devdrive-server.onrender.com/course/delete/${_id}`, {
       method: "DELETE",
       headers: {
         authorization: `Beare ${token}`,
@@ -42,6 +42,7 @@ const PrivetCard = ({ course }) => {
           <div className="bg-gradient-to-r from-primary to-[#41ce79]  font-semibold absolute bottom-5 left-5 px-4 py-2 rounded-lg text-white shadow">
             {category}
           </div>
+          <Link to={`/dashboard/courses/edit/${_id}`} className="bg-gradient-to-r from-primary to-[#41ce79]  font-semibold absolute top-5 right-5 px-4 py-2 rounded-lg text-white shadow ">Edit</Link>
         </figure>
         <div className="card-body pt-7 px-4 pb-4">
           <Link to={`/courses/${_id}`}>

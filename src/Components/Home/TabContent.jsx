@@ -8,7 +8,7 @@ const TabContent = ({ activeCategory, tabsData }) => {
     (data) => data.category === activeCategory
   );
   return (
-    <div className="flex flex-wrap items-center justify-between">
+    <div className="flex flex-wrap items-center justify-between gap-5">
       {filterCourse.map((tab, idx) => {
         return <CourseCard key={idx} course={tab}></CourseCard>;
       })}

@@ -8,7 +8,7 @@ const EditProfile = () => {
   const [userInfo, setUserInfo] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(`https://devdrive-server.onrender.com/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);
@@ -39,7 +39,7 @@ const EditProfile = () => {
     }
 
     await fetch(
-      `http://localhost:5000/user/${user?.email}`,
+      `https://devdrive-server.onrender.com/user/${user?.email}`,
       {
         method: "PATCH",
         headers: {
