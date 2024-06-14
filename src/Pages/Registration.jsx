@@ -22,7 +22,7 @@ const Registration = () => {
             photoURL: result?.user?.photoURL,
             phoneNumber: result?.user?.phoneNumber,
           };
-          fetch("https://devdrive-server.onrender.com/user", {
+          fetch("http://localhost:5000/user", {
             method: "POST",
             headers: {
               "Content-type": "application/json",
@@ -48,7 +48,7 @@ const Registration = () => {
             photoURL: result?.user?.photoURL,
             phoneNumber: result?.user?.phoneNumber,
           };
-          fetch("https://devdrive-server.onrender.com/user", {
+          fetch("http://localhost:5000/user", {
             method: "POST",
             headers: {
               "Content-type": "application/json",
@@ -85,7 +85,7 @@ const Registration = () => {
               photoURL: photoURL,
               phoneNumber: result?.user?.phoneNumber,
             };
-            fetch("https://devdrive-server.onrender.com/user", {
+            fetch("http://localhost:5000/user", {
               method: "POST",
               headers: {
                 "Content-type": "application/json",

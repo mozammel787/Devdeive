@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import {  Outlet } from "react-router-dom";
+import {  Link, Outlet } from "react-router-dom";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -47,30 +47,31 @@ const PrivateLayout = () => {
               <div className="flex-1">
                 <ul className="pt-2 pb-4 space-y-4 text-sm">
                   <li className="rounded-full text-base px-4 text-gray-600 hover:bg-primary hover:text-white hover:shadow ">
-                    <a
+                    <Link 
+                    to={"/dashboard"}
                       rel="noopener noreferrer"
-                      href="#"
+                      
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                     <IoHomeOutline  className="text-xl " />
                       <span>Home</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow ">
-                    <a
+                    <Link to={"search"}
                       rel="noopener noreferrer"
-                      href="#"
+                     
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                      
                       <IoSearchOutline className="text-xl " />
                       <span>Search</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
                     <a
                       rel="noopener noreferrer"
-                      href="#"
+                      
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                      <BsPersonVideo3 className="text-lg " />
@@ -80,7 +81,7 @@ const PrivateLayout = () => {
                   <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
                     <a
                       rel="noopener noreferrer"
-                      href="#"
+                      
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                      <IoCartOutline className="text-xl " />
@@ -88,29 +89,29 @@ const PrivateLayout = () => {
                     </a>
                   </li>
                   <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <a
+                    <Link
                       rel="noopener noreferrer"
-                      href="#"
+                      to={"my-courses"}
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                      <IoRocketOutline  className="text-xl "/>
                       <span>My Courses</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <a
+                    <Link
                       rel="noopener noreferrer"
-                      href="#"
+                      to={"add-courses"}
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                       <IoAddCircleOutline className="text-xl "/>
                       <span>Add Courses</span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="rounded-full text-base px-4 hover:bg-red-600 hover:text-white hover:shadow">
                     <button onClick={()=>logOut()}
                       rel="noopener noreferrer"
-                      href="#"
+                      
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                       <svg
@@ -135,15 +136,7 @@ const PrivateLayout = () => {
               />
               <div>
                 <h2 className="text-lg font-semibold">{user.displayName}</h2>
-                <span className="flex items-center space-x-1">
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="text-xs hover:underline "
-                  >
-                    View profile
-                  </a>
-                </span>
+                
               </div>
             </div>
           </div>

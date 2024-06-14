@@ -8,14 +8,13 @@ const MyCourses = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [course, setCourse] = useState([]);
   const [lode, setLode] = useState(false);
-  const user = useAuth();
-
+  const {user} = useAuth();
   useEffect(() => {
     setLode(true);
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://devdrive-server.onrender.com/course/${user?.email}`
+          `http://localhost:5000/course/find/${user?.email}`
         );
         setCourse(response.data);
       } catch (error) {

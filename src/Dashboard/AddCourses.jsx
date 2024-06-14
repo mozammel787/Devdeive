@@ -53,24 +53,24 @@ const AddCourses = () => {
       milestone,
       milestoneList: [
         {
-          videoTitleOne,
-          videoUrlOne,
+          title: videoTitleOne,
+          videUrl: videoUrlOne,
         },
         {
-          videoTitleTwo,
-          videoUrlTwo,
+          title: videoTitleTwo,
+          videUrl: videoUrlTwo,
         },
         {
-          videoTitleThree,
-          videoUrlThree,
+          title: videoTitleThree,
+          videUrl: videoUrlThree,
         },
         {
-          videoTitleFore,
-          videoUrlFore,
+          title: videoTitleFore,
+          videUrl: videoUrlFore,
         },
         {
-          videoTitleFive,
-          videoUrlFive,
+          title: videoTitleFive,
+          videUrl: videoUrlFive,
         },
       ],
       description,
@@ -82,7 +82,7 @@ const AddCourses = () => {
 
     console.log(course);
 
-    await fetch("https://devdrive-server.onrender.com/course/add", {
+    await fetch("http://localhost:5000/course/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -94,7 +94,7 @@ const AddCourses = () => {
       .then((data) => {
         if (data.acknowledged) {
           toast.success("Successfully toasted!");
-          navigate(`/dashboard}`);
+          navigate(`/dashboard`);
         }
       })
       .catch((error) => {

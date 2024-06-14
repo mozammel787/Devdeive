@@ -27,7 +27,7 @@ const CourseTab = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://devdrive-server.onrender.com/course");
+        const response = await axios.get("http://localhost:5000/course");
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

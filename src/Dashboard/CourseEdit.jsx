@@ -5,14 +5,14 @@ import useAuth from "../Hook/useAuth";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
-const AddCourses = () => {
-  const { user } = useAuth();
-  const [category, setCategory] = useState("");
-  const [lave, setLave] = useState("");
-  const [dis, setDis] = useState("");
+const CourseEdit = () => {
   const oldData = useLoaderData();
+  const { user } = useAuth();
+  const [category, setCategory] = useState(oldData?.category || " ");
+  const [lave, setLave] = useState(oldData?.lave || " ");
+  const [dis, setDis] = useState(oldData?.description || " ");
   const navigate = useNavigate();
-
+  console.log(dis);
   const handelSubmit = async (e) => {
     const token = localStorage.getItem("token");
     e.preventDefault();
@@ -81,9 +81,9 @@ const AddCourses = () => {
       authorEmail,
     };
 
-    console.log(course);
+    console.log(dis);
 
-    await fetch("https://devdrive-server.onrender.com/course/edit", {
+    await fetch(`http://localhost:5000/course/edit/${oldData?._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
@@ -95,7 +95,7 @@ const AddCourses = () => {
       .then((data) => {
         if (data.acknowledged) {
           toast.success("Successfully toasted!");
-          navigate(`/dashboard}`);
+          navigate(`/dashboard`);
         }
       })
       .catch((error) => {
@@ -325,9 +325,8 @@ const AddCourses = () => {
                 </label>
 
                 <CKEditor
-                  className="tailwind-ignore"
                   editor={ClassicEditor}
-                  data=""
+                  data={dis}
                   config={{
                     toolbar: [
                       "heading",
@@ -343,7 +342,8 @@ const AddCourses = () => {
                     ],
                   }}
                   onChange={(event, editor) => {
-                    setDis(editor.getData());
+                    const data = editor.getData();
+                    setDis(data);
                   }}
                 />
               </div>
@@ -368,7 +368,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoTitleOne"
-                  value={oldData?.videoTitleOne}
+                  value={oldData.milestoneList[0].videoTitleOne}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -379,7 +379,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoUrlOne"
-                  value={oldData?.videoUrlOne}
+                  value={oldData.milestoneList[0].videoUrlOne}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -391,7 +391,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoTitleTwo"
-                  value={oldData?.videoTitleTwo}
+                  value={oldData?.milestoneList[1].videoTitleTwo}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -402,7 +402,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoUrlTwo"
-                  value={oldData?.videoUrlTwo}
+                  value={oldData?.milestoneList[1]?.videoUrlTwo}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -414,7 +414,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoTitleThree"
-                  value={oldData?.videoTitleThree}
+                  value={oldData?.milestoneList[2]?.videoTitleThree}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -425,7 +425,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoUrlThree"
-                  value={oldData?.videoUrlThree}
+                  value={oldData?.milestoneList[2]?.videoUrlThree}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -437,7 +437,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoTitleFore"
-                  value={oldData?.videoTitleFore}
+                  value={oldData?.milestoneList[3]?.videoTitleFore}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -448,7 +448,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoUrlFore"
-                  value={oldData?.videoUrlFore}
+                  value={oldData?.milestoneList[3]?.videoUrlFore}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -460,7 +460,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoTitleFive"
-                  value={oldData?.videoTitleFive}
+                  value={oldData?.milestoneList[4]?.videoTitleFive}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -471,7 +471,7 @@ const AddCourses = () => {
                 <input
                   type="text"
                   name="videoUrlFive"
-                  value={oldData?.videoUrlFive}
+                  value={oldData?.milestoneList[4].videoUrlFive}
                   className="w-full px-8 py-4 rounded font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                 />
               </div>
@@ -490,4 +490,4 @@ const AddCourses = () => {
   );
 };
 
-export default AddCourses;
+export default CourseEdit;

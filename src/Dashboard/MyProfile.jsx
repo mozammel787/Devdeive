@@ -1,36 +1,55 @@
-/* eslint-disable react/prop-types */
-const Instructor = ({ author, authorPhoto }) => {
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useAuth from "../Hook/useAuth";
+
+const MyProfile = () => {
+  const { user } = useAuth(); 
+  const [userInfo, setUserInfo] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setUserInfo(data));
+  }, [user]);
+
+  // console.log(userInfo);
+
   return (
     <div>
-      <div className="flex items-start justify-between max-w-full p-6  shadow-md rounded-xl  bg-neutral text-gray-800">
-        <div className="w-[40%]">
-          <img
-            src={authorPhoto}
-            alt=""
-            className="w-64 h-64 object-cover mr-auto rounded-lg bg-gray-500 aspect-square"
-          />
-        </div>
+      <h2 className="my-28 text-2xl text-center font-bold sm:text-3xl">
+        My Profile
+      </h2>
+      <div className=" max-w-lg w-[80vw]  md:w-[50vw]">
+        <div className="rounded border bg-white px-4 pt-4 pb-10 shadow-lg ">
+          <div className="w-full flex justify-end">
+          <Link to={"edit-profile"} className="btn btn-primary rounded mr-0">Edit</Link>
 
-        <div className=" w-[60%] space-y-4 text-left ">
-          <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">{author}</h2>
-            <p className=" text-xs sm:text-base text-gray-600">
-              Full-stack developer
-            </p>
-            <p>
-              Offer brief biographies or profiles of each instructor. These may
-              include details about their careers, achievements, and interests.
-              Provide insights into their teaching philosophy and approach to
-              the subject matter. Share any unique experiences or projects they
-              have been involved in that are relevant to the course content.
-            </p>
           </div>
-          <div className="flex justify-start pt-2 space-x-4 align-center">
+          <div className="relative mx-auto w-28 h-28  md:w-40 md:h-40 -mt-28 shadow-xl rounded-full">
+            <img
+              className="mx-auto h-full w-full rounded-full object-cover"
+              src={userInfo.photoURL}
+              alt=""
+            />
+          </div>
+          {userInfo?.displayName && (
+            <h1 className="my-4 text-center text-3xl font-bold leading-8 text-gray-900">
+              {userInfo.displayName}
+            </h1>
+          )}
+          {userInfo?.bio && (
+            <h1 className="my-4 text-center  text-gray-400">
+              {userInfo.bio}
+            </h1>
+          )}
+
+
+          <div className="flex justify-center pt-2 space-x-4 align-center">
             <a
               rel="noopener noreferrer"
               href="#"
               aria-label="GitHub"
-              className="p-2 rounded-md text-gray-800 hover:text-primary"
+              className="p-2 rounded-md text-gray-800 hover:text-gray-600"
             >
               <svg
                 viewBox="0 0 496 512"
@@ -44,7 +63,7 @@ const Instructor = ({ author, authorPhoto }) => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Dribble"
-              className="p-2 rounded-md text-gray-800 hover:text-primary"
+              className="p-2 rounded-md text-gray-800 hover:text-gray-600"
             >
               <svg
                 viewBox="0 0 512 512"
@@ -58,7 +77,7 @@ const Instructor = ({ author, authorPhoto }) => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Twitter"
-              className="p-2 rounded-md text-gray-800 hover:text-primary"
+              className="p-2 rounded-md text-gray-800 hover:text-gray-600"
             >
               <svg
                 viewBox="0 0 512 512"
@@ -72,7 +91,7 @@ const Instructor = ({ author, authorPhoto }) => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Email"
-              className="p-2 rounded-md text-gray-800 hover:text-primary"
+              className="p-2 rounded-md text-gray-800 hover:text-gray-600"
             >
               <svg
                 viewBox="0 0 512 512"
@@ -83,10 +102,28 @@ const Instructor = ({ author, authorPhoto }) => {
               </svg>
             </a>
           </div>
+          <ul className="mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
+            {userInfo?.email && (
+              <li className="flex items-center py-3 text-sm">
+                <span>Email </span>
+                <span className="ml-auto">
+                  <span className="rounded-full py-1 px-2 text-xs font-medium ">
+                    {userInfo.email}
+                  </span>
+                </span>
+              </li>
+            )}
+            {userInfo?.phoneNumber && (
+              <li className="flex items-center py-3 text-sm">
+                <span>Phone Number</span>
+                <span className="ml-auto">{userInfo.phoneNumber}</span>
+              </li>
+            )}
+          </ul>
         </div>
       </div>
     </div>
   );
 };
 
-export default Instructor;
+export default MyProfile;

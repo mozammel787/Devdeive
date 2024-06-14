@@ -9,6 +9,9 @@ import PrivetRouter from "./PrivetRouter";
 import SingleCourse from "../Pages/SingleCourse";
 import AddCourses from "../Dashboard/AddCourses";
 import MyCourses from "../Dashboard/MyCourses";
+import CourseEdit from "../Dashboard/CourseEdit";
+import MyProfile from "../Dashboard/MyProfile";
+import EditProfile from "../Dashboard/EditProfile";
 
 
 export const MainRoute = createBrowserRouter([
@@ -35,7 +38,7 @@ export const MainRoute = createBrowserRouter([
             {
                 path:"/courses/:id",
                 element:<SingleCourse/>,
-                loader:({params})=>fetch(`https://devdrive-server.onrender.com/course/${params.id}`)
+                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
             },
         ]
     },{
@@ -44,8 +47,17 @@ export const MainRoute = createBrowserRouter([
         children:[
             {
                 path:"",
+                element: <MyProfile/>
+            },
+            {
+                path:"edit-profile",
+                element: <EditProfile/>
+            },
+            {
+                path:"search",
                 element: <AllCourses/>
             },
+           
             {
                 path:"add-courses",
                 element: <AddCourses/>
@@ -56,8 +68,8 @@ export const MainRoute = createBrowserRouter([
             },
             {
                 path:"courses/edit/:id",
-                element:<SingleCourse/>,
-                loader:({params})=>fetch(`https://devdrive-server.onrender.com/course/${params.id}`)
+                element:<CourseEdit/>,
+                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
             },
         
         ]
