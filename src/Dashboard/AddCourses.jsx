@@ -82,7 +82,7 @@ const AddCourses = () => {
 
     console.log(course);
 
-    await fetch("http://localhost:5000/course/add", {
+    await fetch("https://devdrive-server.onrender.com/course/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

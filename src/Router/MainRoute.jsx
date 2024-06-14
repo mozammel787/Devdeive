@@ -35,7 +35,7 @@ export const MainRoute = createBrowserRouter([
             {
                 path:"/courses/:id",
                 element:<SingleCourse/>,
-                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
+                loader:({params})=>fetch(`https://devdrive-server.onrender.com/course/${params.id}`)
             },
         ]
     },{
@@ -57,7 +57,7 @@ export const MainRoute = createBrowserRouter([
             {
                 path:"courses/edit/:id",
                 element:<SingleCourse/>,
-                loader:({params})=>fetch(`http://localhost:5000/course/${params.id}`)
+                loader:({params})=>fetch(`https://devdrive-server.onrender.com/course/${params.id}`)
             },
         
         ]
