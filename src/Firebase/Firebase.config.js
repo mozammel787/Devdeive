@@ -1,13 +1,14 @@
 
 import { initializeApp } from "firebase/app";
+
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId,
-  measurementId: import.meta.env.VITE_measurementId,
+  apiKey: "AIzaSyChtof_KXCEkagNC016mgJb1SpVGXNXEYo",
+  authDomain: "devdrive-d0808.firebaseapp.com",
+  projectId: "devdrive-d0808",
+  storageBucket: "devdrive-d0808.appspot.com",
+  messagingSenderId: "336459833497",
+  appId: "1:336459833497:web:96ae5736944a52873f1808",
+  measurementId: "G-SKWFYC4YYH"
 };
 
 // Initialize Firebase
