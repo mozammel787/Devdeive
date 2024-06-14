@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font  */
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/Inter-VariableFont_slnt\wght.ttf);
+  }
+  html {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+/* button  */
+
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 100px;
+  padding: 12px 32px;
+  color: #000;
+  vertical-align: middle;
+  border: 1px solid #000;
+}
+
+.btn:hover {
+  color: #2fa75f;
+  border-color: #2fa75f;
+  box-shadow: rgba(0, 255, 102, 0.6) 0px 0px 20px 0px;
+}
+
+.btn-primary {
+  color: #fff;
+  border: 0;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  -webkit-appearance: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  background: #2fa75f !important;
+  background-image: linear-gradient(to right, #2fa75f, #41ce79, #2fa75f) !important;
+  background-size: 300% 100% !important;
+  -moz-transition: all 0.4s ease-in-out !important;
+  -o-transition: all 0.4s ease-in-out !important;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0 !important;
+  -moz-transition: all 0.4s ease-in-out !important;
+  -o-transition: all 0.4s ease-in-out !important;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  transition: all 0.4s ease-in-out !important;
+  color: #fff !important;
+}
+
+/* text animation hero section  */
+.text-ane {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  color: rgba(255, 0, 0, 0);
+  transition: all 0.5s;
+  position: relative;
+}
+
+.text-ane::before {
+  content: "Succeed";
+  position: absolute;
+  color: #2fa75f;
+  width: 0;
+  overflow: hidden;
+  animation: pulse-width 3s ease-in-out infinite;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2fa75f;
+}
+
+@keyframes pulse-width {
+  0%,
+  100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+.hero::after {
+  position: absolute;
+  top: 97px;
+  left: 0;
+  content: "";
+  background: url(https://softivuspro.com/html/edufast/edufast/assets/images/vectors/ellip.png) no-repeat center center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.amn-sp{
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* catagory slider  */
+
+
+
+.marquee-item {
+    transition: animation 0.2s ease-out;
+}
+.marquee-inner.to-left {
+    animation: marqueeLeft 25s linear infinite;
+}
+@keyframes marqueeLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+
+
+/* note pad */
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred,
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners{
+  min-height: 50px; /* Adjust this value as needed */
+
+  border: 1px solid #ccced1;
+
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred > * ,
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners > * {
+  all: revert;
+
+  
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred{
+  background-color: #f3f4f6; /* Adjust this value as needed */
+}
