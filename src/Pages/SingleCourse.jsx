@@ -1,15 +1,15 @@
 import { Video } from "@triyanox/react-video";
 import { useState } from "react";
 import { BiSolidCategory } from "react-icons/bi";
-import { IoStar, IoVideocam } from "react-icons/io5";
+import {  IoStar, IoVideocam } from "react-icons/io5";
 import Curriculum from "../Components/SingleCourse/Curriculum";
 import Instructor from "../Components/SingleCourse/Instructor";
 import Reviews from "../Components/SingleCourse/Reviews";
 import { FaChartLine, FaRegClock } from "react-icons/fa6";
-import { MdCalendarToday } from "react-icons/md";
+import { MdAddTask, MdCalendarToday } from "react-icons/md";
 import { GrLanguage } from "react-icons/gr";
-import { RiGroupLine } from "react-icons/ri";
 import { Link, useLoaderData } from "react-router-dom";
+
 
 const SingleCourse = () => {
   const course = useLoaderData();
@@ -28,7 +28,8 @@ const SingleCourse = () => {
     author,
     category,
     authorPhoto,
-    _id
+    _id,
+    enrolled
   } = course;
 
   const [activeTabIndex, setActiveTabIndex] = useState("Overview");
@@ -195,10 +196,10 @@ const SingleCourse = () => {
               </div>
               <div className="flex justify-between items-center border-b py-4">
                 <p className="flex items-center gap-3 text-lg font-semibold">
-                  <RiGroupLine className="text-primary text-2xl " />
-                  Students
+                  <MdAddTask   className="text-primary text-2xl " />
+                  Total Enroll
                 </p>
-                <p className="text-lg ">4k</p>
+                <p className="text-lg ">{enrolled}</p>
               </div>
               <div className="flex justify-between items-center border-b py-4">
                 <p className="flex items-center gap-3 text-lg font-semibold">

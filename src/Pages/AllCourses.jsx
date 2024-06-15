@@ -37,7 +37,7 @@ const AllCourses = () => {
   const filteredData = course?.filter((item) =>
     item?.title?.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  console.log(filteredData);
+  // console.log(filteredData);
   return (
     <div className="container mx-auto my-36  p-5 sm:p-0">
       <h2 className=" font-semibold text-5xl text-center ">

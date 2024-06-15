@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#1c1d20] text-white">
+    <div className="bg-[#1c1d20] text-white z-10 relative">
       <footer className="footer py-10  container mx-auto flex justify-between ">
         <div className="w-[33%] flex flex-col gap-6 pr-20">
           <h1 className="text-6xl font-semibold">

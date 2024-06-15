@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import {  Link, Outlet } from "react-router-dom";
+import {   NavLink, Outlet } from "react-router-dom";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import useAuth from "../Hook/useAuth";
 import { IoAddCircleOutline, IoCartOutline, IoHomeOutline, IoRocketOutline, IoSearchOutline } from "react-icons/io5";
-import { BsPersonVideo3 } from "react-icons/bs";
+import { PiVideoLight } from "react-icons/pi";
 
 const PrivateLayout = () => {
   const { user, logOut } = useAuth();
@@ -37,78 +37,75 @@ const PrivateLayout = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <div className="flex flex-col justify-between h-full p-3 w-60 bg-gray-50 text-gray-800 pt-28">
+          <div className="flex flex-col justify-between h-full p-3 w-60 bg-neutral text-gray-800 pt-28">
             <div className="space-y-3">
-              <div className="flex items-center ">
-                <h2 className="text-2xl font-semibold text-secondary pl-6">Dashboard</h2>
-              </div>
-                <hr />
+              
         
               <div className="flex-1">
-                <ul className="pt-2 pb-4 space-y-4 text-sm">
-                  <li className="rounded-full text-base px-4 text-gray-600 hover:bg-primary hover:text-white hover:shadow ">
-                    <Link 
+                <ul className="pt-2 pb-4 space-y-5 text-sm">
+                  <li className="rounded-full text-lg font-medium px-3 py-1 text-gray-600 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow  ">
+                    <NavLink 
                     to={"/dashboard"}
                       rel="noopener noreferrer"
                       
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
-                    <IoHomeOutline  className="text-xl " />
+                    <IoHomeOutline  className="text-2xl " />
                       <span>Home</span>
-                    </Link>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow ">
-                    <Link to={"search"}
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow  ">
+                    <NavLink to={"search"}
                       rel="noopener noreferrer"
                      
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
                      
-                      <IoSearchOutline className="text-xl " />
+                      <IoSearchOutline className="text-2xl " />
                       <span>Search</span>
-                    </Link>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <a
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow ">
+                    <NavLink to={"enrolled-courses"}
                       rel="noopener noreferrer"
                       
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
-                     <BsPersonVideo3 className="text-lg " />
+                     <PiVideoLight   className="text-2xl " />
                       <span>Enrolled Courses</span>
-                    </a>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <a
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow ">
+                    <NavLink to={"Order-history"}
                       rel="noopener noreferrer"
                       
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
-                     <IoCartOutline className="text-xl " />
+                     <IoCartOutline className="text-2xl " />
                       <span>Order History</span>
-                    </a>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <Link
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow ">
+                    <NavLink
                       rel="noopener noreferrer"
                       to={"my-courses"}
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
-                     <IoRocketOutline  className="text-xl "/>
+                     <IoRocketOutline  className="text-2xl "/>
                       <span>My Courses</span>
-                    </Link>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-primary hover:text-white hover:shadow">
-                    <Link
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-gradient-to-r hover:from-primary hover:to-[#41ce79] hover:text-white hover:shadow ">
+                    <NavLink
                       rel="noopener noreferrer"
                       to={"add-courses"}
                       className="flex items-center p-2 space-x-3 rounded-md"
                     >
-                      <IoAddCircleOutline className="text-xl "/>
+                      <IoAddCircleOutline className="text-2xl "/>
                       <span>Add Courses</span>
-                    </Link>
+                    </NavLink>
                   </li>
-                  <li className="rounded-full text-base px-4 hover:bg-red-600 hover:text-white hover:shadow">
+                  <li className="rounded-full text-lg font-medium px-3 py-1 hover:bg-red-600 hover:text-white hover:shadow">
                     <button onClick={()=>logOut()}
                       rel="noopener noreferrer"
                       

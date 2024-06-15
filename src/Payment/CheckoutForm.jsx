@@ -13,7 +13,7 @@ const CheckoutForm = ({ course }) => {
   const [processing, setProcessing] = useState(false);
   const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
-  const { price, title, _id, authorEmail } = course;
+  const { price, title, _id, authorEmail, author, thumPhotoUrl } = course;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -73,6 +73,10 @@ const CheckoutForm = ({ course }) => {
         customerEmail: user?.email,
         courseId: _id,
         authorEmail,
+        author,
+        title,
+        thumPhotoUrl,
+        customerName: user?.displayName,
       };
       fetch("https://devdrive-server.onrender.com/payment", {
         method: "POST",

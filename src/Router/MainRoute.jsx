@@ -15,6 +15,10 @@ import EditProfile from "../Dashboard/EditProfile";
 import Payment from "../Payment/Payment";
 import PaymentComplete from "../Payment/PaymentComplete";
 import PageNotFount from "../Pages/PageNotFount";
+import EnrolledCourses from "../Dashboard/EnrolledCourses";
+import CourseWatchingpage from "../Dashboard/CourseWatchingpage";
+import OrderHistory from "../Dashboard/OrderHistory";
+import ContactUs from "../Pages/ContactUs";
 
 export const MainRoute = createBrowserRouter([
   {
@@ -37,6 +41,10 @@ export const MainRoute = createBrowserRouter([
       {
         path: "/courses",
         element: <AllCourses />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
       {
         path: "/courses/:id",
@@ -77,8 +85,22 @@ export const MainRoute = createBrowserRouter([
         element: <MyCourses />,
       },
       {
+        path: "enrolled-courses",
+        element: <EnrolledCourses />,
+      },
+      {
+        path: "Order-history",
+        element: <OrderHistory />,
+      },
+      {
         path: "courses/edit/:id",
         element: <CourseEdit />,
+        loader: ({ params }) =>
+          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+      },
+      {
+        path: "courses/watch/:id",
+        element: <CourseWatchingpage />,
         loader: ({ params }) =>
           fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
       },

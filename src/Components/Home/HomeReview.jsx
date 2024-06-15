@@ -1,101 +1,141 @@
-/* eslint-disable react/no-unescaped-entities */
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 import { FaStar } from "react-icons/fa6";
-
-const HomeReview = () => {
+import { IoMdQuote } from "react-icons/io";
+/* Install pure-react-carousel using -> npm i pure-react-carousel */
+export default function MyApp() {
   return (
-    <div className="flex  flex-col gap-5 items-center justify-center my-20 container mx-auto">
-      <div className="inline-flex gap-3 border border-primary rounded-full items-center  py-2 px-6  font-semibold text-xl ">
-        <FaStar className="text-primary" />
-        <p>Review </p>
+    <div>
+      <div className="flex items-center justify-between h-full w-full absolute z-0">
+        <div className="w-1/3 bg-white h-full" />
+        <div className="w-4/6 ml-16 bg-neutral h-full" />
       </div>
-      <h2 className=" font-semibold text-5xl  ">What our customers say</h2>
-      <p>
-        We take immense pride in the positive impact our courses and community
-        have on learners' lives.
-      </p>
-      <div className="flex items-center gap-8 mt-10">
-        <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-300 bg-neutral text-gray-800">
-          <div className="flex justify-between p-4">
-            <div className="flex space-x-4">
-              <div>
-                <img
-                  src="https://source.unsplash.com/100x100/?portrait"
-                  alt=""
-                  className="object-cover w-12 h-12 rounded-full bg-gray-500"
-                />
+      <div className="xl:px-20 px-8 py-20 2xl:mx-auto 2xl:container relative z-40">
+        <CarouselProvider
+          naturalSlideWidth={100}
+          isIntrinsicHeight={true}
+          totalSlides={2}
+        >
+          <div className="inline-flex gap-3 border border-primary rounded-full items-center py-2 px-6 mb-4 font-semibold text-xl mr-auto">
+            <FaStar className="text-primary" />
+            <p>Reviews</p>
+          </div>
+          <h1 className="text-5xl font-bold xl:block hidden leading-tight text-gray-800">
+            What our customers are
+            <br />
+            saying
+          </h1>
+          <h1 className="text-5xl font-bold xl:hidden block leading-tight lg:leading-10 text-gray-800">
+            What our customers are saying
+          </h1>
+          <Slider>
+            <Slide index={0} tabIndex="null">
+              <div className="flex">
+                <div className="mt-14 md:flex">
+                  <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
+                    <img
+                      src="https://i.ibb.co/4g1D9cv/imgslider1.png"
+                      alt="image of profile"
+                      className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded-xl"
+                    />
+                    <div className="w-32 md:flex hidden items-center justify-center absolute top-0 -mr-16 -mt-14 right-0 h-32 bg-white shadow rounded-full">
+                      <IoMdQuote className="text-6xl text-primary" />
+                    </div>
+                  </div>
+                  <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
+                    <div>
+                      <h1 className="text-2xl font-semibold xl:leading-loose text-gray-800">
+                        Some of the best work that was done!
+                      </h1>
+                      <p className="text-base font-medium leading-6 mt-4 text-gray-600">
+                        Our core values are at the heart of all that we do. They
+                        are integrated into our daily work lives and help us to
+                        remember our customers always comes first, the last
+                        thank you should always comes from us.
+                      </p>
+                    </div>
+                    <div className="md:mt-0 mt-8">
+                      <p className="text-base font-medium leading-4 text-gray-800">
+                        Anna Smith
+                      </p>
+                      <p className="text-base leading-4 mt-2 mb-4 text-gray-600">
+                        Senior Web Designer
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold">Leroy Jenkins</h4>
-                <span className="text-xs text-gray-600">2 days ago</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2 text-yellow-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                className="w-5 h-5 fill-current"
+            </Slide>
+            <Slide index={1}>
+              <div
+                className="flex relative"
+                style={{ transform: "translateX(0%)" }}
               >
-                <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
-              </svg>
-              <span className="text-xl font-bold">4.5</span>
-            </div>
-          </div>
-          <div className="p-4 space-y-2 text-sm text-gray-600">
-            <p>
-              Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu
-              dictum lectus consequat vitae. Etiam ut dolor id justo fringilla
-              finibus.
-            </p>
-            <p>
-              Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu
-              mauris cursus venenatis. Maecenas gravida urna vitae accumsan
-              feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
-            </p>
-          </div>
-        </div>
-        <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-300 bg-neutral text-gray-800">
-          <div className="flex justify-between p-4">
-            <div className="flex space-x-4">
-              <div>
-                <img
-                  src="https://source.unsplash.com/100x100/?portrait"
-                  alt=""
-                  className="object-cover w-12 h-12 rounded-full bg-gray-500"
-                />
+                <div className="mt-14 md:flex">
+                  <div className="relative lg:w-1/2 sm:w-96 xl:h-96 h-80">
+                    <img
+                      src="https://i.ibb.co/4g1D9cv/imgslider1.png"
+                      alt="image of profile"
+                      className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded-xl"
+                    />
+                    <div className="w-32 md:flex hidden items-center justify-center absolute top-0 -mr-16 -mt-14 right-0 h-32 bg-white shadow rounded-full">
+                      <IoMdQuote className="text-6xl text-primary" />
+                    </div>
+                  </div>
+                  <div className="md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0 mt-4 flex flex-col justify-between">
+                    <div>
+                      <h1 className="text-2xl font-semibold xl:leading-loose text-gray-800">
+                        Some of the best work that was done!
+                      </h1>
+                      <p className="text-base font-medium leading-6 mt-4 text-gray-600">
+                        Our core values are at the heart of all that we do. They
+                        are integrated into our daily work lives and help us to
+                        remember our customers always comes first, the last
+                        thank you should always comes from us.
+                      </p>
+                    </div>
+                    <div className="md:mt-0 mt-8">
+                      <p className="text-base font-medium leading-4 text-gray-800">
+                        Anna Smith
+                      </p>
+                      <p className="text-base leading-4 mt-2 mb-4 text-gray-600">
+                        Senior Web Designer
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold">Leroy Jenkins</h4>
-                <span className="text-xs text-gray-600">2 days ago</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2 text-yellow-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                className="w-5 h-5 fill-current"
-              >
-                <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
-              </svg>
-              <span className="text-xl font-bold">4.5</span>
-            </div>
+            </Slide>
+          </Slider>
+          <div className="flex items-center gap-3 mt-8">
+            <ButtonBack
+              className="cursor-pointer  "
+              role="button"
+              aria-label="previous slide"
+            >
+              <BsFillArrowLeftCircleFill className="text-5xl  text-primary shadow rounded-full " />
+            </ButtonBack>
+
+            <ButtonNext
+              role="button"
+              aria-label="next slide"
+              className="cursor-pointer  ml-5"
+            >
+              <BsFillArrowRightCircleFill className="text-5xl   text-primary shadow rounded-full" />
+            </ButtonNext>
           </div>
-          <div className="p-4 space-y-2 text-sm text-gray-600">
-            <p>
-              Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu
-              dictum lectus consequat vitae. Etiam ut dolor id justo fringilla
-              finibus.
-            </p>
-            <p>
-              Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu
-              mauris cursus venenatis. Maecenas gravida urna vitae accumsan
-              feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
-            </p>
-          </div>
-        </div>
+        </CarouselProvider>
       </div>
-      
     </div>
   );
-};
-
-export default HomeReview;
+}

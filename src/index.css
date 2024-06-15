@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* font  */
 
 @layer base {
@@ -65,6 +67,10 @@
   color: #fff !important;
 }
 
+
+button[disabled]{
+  opacity: 0.5;
+}
 /* text animation hero section  */
 .text-ane {
   -webkit-text-stroke-width: 1px;
@@ -159,3 +165,5 @@
 .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred{
   background-color: #f3f4f6; /* Adjust this value as needed */
 }
+
+
