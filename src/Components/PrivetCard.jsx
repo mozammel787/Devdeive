@@ -19,7 +19,7 @@ const PrivetCard = ({ course }) => {
   const handelDelete = async () => {
     const token = localStorage.getItem("token");
 
-    await fetch(`https://devdrive-server.onrender.com/course/delete/${_id}`, {
+    await fetch(`https://devdrive-server.vercel.app/course/delete/${_id}`, {
       method: "DELETE",
       headers: {
         authorization: `Beare ${token}`,

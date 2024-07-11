@@ -82,7 +82,7 @@ const AddCourses = () => {
 
     console.log(course);
 
-    await fetch("https://devdrive-server.onrender.com/course/add", {
+    await fetch("https://devdrive-server.vercel.app/course/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

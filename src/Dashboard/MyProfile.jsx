@@ -7,7 +7,7 @@ const MyProfile = () => {
   const [userInfo, setUserInfo] = useState([]);
 
   useEffect(() => {
-    fetch(`https://devdrive-server.onrender.com/user/${user?.email}`)
+    fetch(`https://devdrive-server.vercel.app/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);

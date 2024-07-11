@@ -8,7 +8,7 @@ const EditProfile = () => {
   const [userInfo, setUserInfo] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://devdrive-server.onrender.com/user/${user?.email}`)
+    fetch(`https://devdrive-server.vercel.app/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
   }, [user]);
@@ -39,7 +39,7 @@ const EditProfile = () => {
     }
 
     await fetch(
-      `https://devdrive-server.onrender.com/user/${user?.email}`,
+      `https://devdrive-server.vercel.app/user/${user?.email}`,
       {
         method: "PATCH",
         headers: {

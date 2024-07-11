@@ -50,7 +50,7 @@ export const MainRoute = createBrowserRouter([
         path: "/courses/:id",
         element: <SingleCourse />,
         loader: ({ params }) =>
-          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+          fetch(`https://devdrive-server.vercel.app/course/${params.id}`),
       },
     ],
   },
@@ -96,19 +96,19 @@ export const MainRoute = createBrowserRouter([
         path: "courses/edit/:id",
         element: <CourseEdit />,
         loader: ({ params }) =>
-          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+          fetch(`https://devdrive-server.vercel.app/course/${params.id}`),
       },
       {
         path: "courses/watch/:id",
         element: <CourseWatchingpage />,
         loader: ({ params }) =>
-          fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+          fetch(`https://devdrive-server.vercel.app/course/${params.id}`),
       },
       {
         path: "courses/payment/:id",
         element: <Payment></Payment>,
         loader: ({ params }) =>
-            fetch(`https://devdrive-server.onrender.com/course/${params.id}`),
+          fetch(`https://devdrive-server.vercel.app/course/${params.id}`),
       },
     ],
   },

@@ -83,7 +83,7 @@ const CourseEdit = () => {
 
     console.log(dis);
 
-    await fetch(`https://devdrive-server.onrender.com/course/edit/${oldData?._id}`, {
+    await fetch(`https://devdrive-server.vercel.app/course/edit/${oldData?._id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

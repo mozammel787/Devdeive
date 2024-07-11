@@ -17,7 +17,7 @@ const CheckoutForm = ({ course }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://devdrive-server.onrender.com/create-payment-intent", {
+    fetch("https://devdrive-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const CheckoutForm = ({ course }) => {
         thumPhotoUrl,
         customerName: user?.displayName,
       };
-      fetch("https://devdrive-server.onrender.com/payment", {
+      fetch("https://devdrive-server.vercel.app/payment", {
         method: "POST",
         headers: {
           "content-type": "application/json",
