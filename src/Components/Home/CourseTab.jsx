@@ -13,7 +13,7 @@ const CourseTab = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://devdrive-server.vercel.app/course");
+        const response = await axios.get("https://devdrive-server.onrender.com/course");
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

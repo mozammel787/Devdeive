@@ -13,7 +13,7 @@ const EnrolledCourses = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://devdrive-server.vercel.app/user/${user?.email}`
+          `https://devdrive-server.onrender.com/user/${user?.email}`
         );
         setData(response.data?.enrolledCourses);
       } catch (error) {
