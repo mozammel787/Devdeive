@@ -4,11 +4,11 @@ import TabContent from "./TabContent";
 import { FaStar } from "react-icons/fa6";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import courseList from '../../assets/course.json'
 
 const CourseTab = () => {
   const [activeTabIndex, setActiveTabIndex] = useState("HTML");
-  const [course, setCourse] = useState([]);
+  const [course, setCourse] = useState(courseList);
 
   useEffect(() => {
     const fetchData = async () => {
