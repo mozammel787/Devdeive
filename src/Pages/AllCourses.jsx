@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CourseCard from "../Components/CourseCard";
 import axios from "axios";
 import Lading from "../Components/Lading";
-import courseList from '../../assets/course.json'
+import courseList from '../assets/course.json'
 
 const AllCourses = () => {
   const [searchTerm, setSearchTerm] = useState("");
