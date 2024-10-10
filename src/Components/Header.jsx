@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <div className="navbar  glass  md:py-5 z-50  -mb-[95px] sticky top-0">
         <div className="container mx-auto justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center w-[10%]">
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -71,7 +71,7 @@ const Header = () => {
               <img className="w-[200px] md:w-[220px]" src="logo.png" alt="" />
             </Link>
           </div>
-          <div className="navbar-center">
+          <div className="navbar-center w-[80%]">
             <div className=" hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
@@ -109,7 +109,7 @@ const Header = () => {
               </ul>
             </div>
           </div>
-          <div className="flex items-center gap-7 mr-3">
+          <div className="flex items-center gap-7 mr-3 w-[10%]">
             <div className=" dropdown dropdown-end">
               <div
                 tabIndex={0}

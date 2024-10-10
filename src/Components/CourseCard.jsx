@@ -19,7 +19,7 @@ const CourseCard = ({ course }) => {
       <div className="card w-[32%] bg-base-100 shadow-sm p-4 border hover:shadow-md">
         <figure className="relative">
           <img
-            className="w-full rounded-xl shadow"
+            className="w-full rounded-xl shadow h-[300px] object-cover"
             src={thumPhotoUrl}
             alt="Shoes"
           />

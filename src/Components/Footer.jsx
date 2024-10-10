@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 border-t  border-[#33363b] container mx-auto">
+      <footer className="footer  py-4 border-t  border-[#33363b] container mx-auto">
         <aside className="text-base ">
           <p>Copyright © 2024 All right reserved by Devdeive Ltd .</p>
         </aside>
