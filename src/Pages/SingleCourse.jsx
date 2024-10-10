@@ -42,6 +42,11 @@ const SingleCourse = () => {
     autoPlay: true,
     loop: true,
   };
+   if (!course) {
+    return (
+      <Lading />
+    );
+  }
   return (
     <div className="my-32 mx-auto container">
       <div className="flex mt-20 justify-between items-start">
