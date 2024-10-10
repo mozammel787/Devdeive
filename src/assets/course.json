@@ -1,0 +1,162 @@
+[
+    {
+        "_id": "666c71e42c1a90b331b00488",
+        "title": "React",
+        "thumPhotoUrl": "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010127.jpg?t=st=1728567686~exp=1728571286~hmac=526da46ee8098e6627afcd4e0692d51381d01ff48487264ccf40ccadc07f4163&w=1380",
+        "thumVideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "lave": "advance",
+        "price": "99",
+        "lessons": "5",
+        "duration": "10 Days",
+        "deadline": "20 Jun",
+        "milestone": "PHP Advance Concepts",
+        "milestoneList": [
+            {
+                "title": "Meal Planning Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Macronutrients Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Adjusting Your Diet To Build Muscle",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "HOW Much Fat Should You Consume Per Day",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Professional Ceramic Moulding",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            }
+        ],
+        "description": "\u003Cp\u003E\u003Cstrong\u003EAre you new to PHP or need a refresher?\u003C/strong\u003E&nbsp;Then this course will help you get all the fundamentals of Procedural PHP, Object Oriented PHP, MYSQLi and ending the course by building a CMS system similar to WordPress, Joomla or Drupal.\u003Cbr\u003E\u003Cstrong\u003EKnowing PHP has allowed me to make enough money to stay home and make courses like this one for students all over the world.\u003C/strong\u003E&nbsp;Being a PHP developer can allow anyone to make really good money online and offline, developing dynamic applications.\u003Cbr\u003EKnowing&nbsp;\u003Cstrong\u003EPHP&nbsp;\u003C/strong\u003Ewill allow you to build web applications, websites or Content Management systems, like WordPress, Facebook, Twitter or even Google.\u003Cbr\u003E\u003Cstrong\u003EThere is no limit to what you can do with this knowledge.\u003C/strong\u003E&nbsp;PHP is one of the most important web programming languages to learn, and knowing it, will give you&nbsp;\u003Cstrong\u003ESUPER POWERS\u003C/strong\u003E&nbsp;in the web development world and job market place.\u003Cbr\u003E\u003Cstrong\u003EWhy?\u003C/strong\u003E\u003Cbr\u003EBecause Millions of websites and applications (the majority) use PHP. You can find a job anywhere or even work on your own, online and in places like freelancer or Odesk. You can definitely make a substantial income once you learn it.\u003Cbr\u003E\u003Cstrong\u003EI will not bore you 🙂\u003C/strong\u003E\u003Cbr\u003EI take my courses very seriously but at the same time I try to make it fun since I know how difficult learning from an instructor with a monotone voice or boring attitude is. This course is fun, and when you need some energy to keep going, you will get it from me.\u003Cbr\u003E\u003Cstrong\u003EMy Approach\u003C/strong\u003E\u003Cbr\u003EPractice, practice and more practice. Every section inside this course has a practice lecture at the end, reinforcing everything with went over in the lectures. I also created a small application the you will be able to download to help you practice PHP. To top it off, we will build and awesome CMS like WordPress, Joomla or Drupal.\u003C/p\u003E\u003Ch3\u003E\u003Cstrong\u003EWhat Will You Learn?\u003C/strong\u003E\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EUnderstand the fundamentals of healthy dieting (calories, protein, carbs, fat, vitamins &amp; minerals)\u003C/li\u003E\u003Cli\u003ECreate a diet that is perfect for your needs and lifestyle\u003C/li\u003E\u003Cli\u003ELearn when, what and how much you should eat for optimal body composition\u003C/li\u003E\u003Cli\u003EBuild more muscle by optimizing your meal plan\u003C/li\u003E\u003Cli\u003ELose fat faster by optimizing your meal plan\u003C/li\u003E\u003Cli\u003EImprove immunity and energy levels with the right vitamins and minerals\u003C/li\u003E\u003C/ul\u003E",
+        "author": "Mohammad Mozammel",
+        "category": "React",
+        "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocL3ygN9PPX1sPUPkMrrZtzvSk5N3R1WPM10dHwf3rrTuFUnK5iM4Q=s96-c",
+        "authorEmail": "mhfaryanemon@gmail.com",
+        "enrolled": 13
+    },
+    {
+        "_id": "666cc01e5d4ae6d98d694632",
+        "title": "HTML",
+        "thumPhotoUrl": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901791.jpg?t=st=1728567528~exp=1728571128~hmac=a31ac07edbe4bf41db8a07c76cc0408ea6f03d785c5459f6fd96dfc8ef7f41e3&w=1380",
+        "thumVideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "lave": "advance",
+        "price": "99",
+        "lessons": "5",
+        "duration": "10 Days",
+        "deadline": "20 Jun",
+        "milestone": "PHP Advance Concepts",
+        "milestoneList": [
+            {
+                "title": "Meal Planning Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Macronutrients Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Adjusting Your Diet To Build Muscle",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "HOW Much Fat Should You Consume Per Day",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Professional Ceramic Moulding",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            }
+        ],
+        "description": "\u003Cp\u003E\u003Cstrong\u003EAre you new to PHP or need a refresher?\u003C/strong\u003E&nbsp;Then this course will help you get all the fundamentals of Procedural PHP, Object Oriented PHP, MYSQLi and ending the course by building a CMS system similar to WordPress, Joomla or Drupal.\u003Cbr\u003E\u003Cstrong\u003EKnowing PHP has allowed me to make enough money to stay home and make courses like this one for students all over the world.\u003C/strong\u003E&nbsp;Being a PHP developer can allow anyone to make really good money online and offline, developing dynamic applications.\u003Cbr\u003EKnowing&nbsp;\u003Cstrong\u003EPHP&nbsp;\u003C/strong\u003Ewill allow you to build web applications, websites or Content Management systems, like WordPress, Facebook, Twitter or even Google.\u003Cbr\u003E\u003Cstrong\u003EThere is no limit to what you can do with this knowledge.\u003C/strong\u003E&nbsp;PHP is one of the most important web programming languages to learn, and knowing it, will give you&nbsp;\u003Cstrong\u003ESUPER POWERS\u003C/strong\u003E&nbsp;in the web development world and job market place.\u003Cbr\u003E\u003Cstrong\u003EWhy?\u003C/strong\u003E\u003Cbr\u003EBecause Millions of websites and applications (the majority) use PHP. You can find a job anywhere or even work on your own, online and in places like freelancer or Odesk. You can definitely make a substantial income once you learn it.\u003Cbr\u003E\u003Cstrong\u003EI will not bore you 🙂\u003C/strong\u003E\u003Cbr\u003EI take my courses very seriously but at the same time I try to make it fun since I know how difficult learning from an instructor with a monotone voice or boring attitude is. This course is fun, and when you need some energy to keep going, you will get it from me.\u003Cbr\u003E\u003Cstrong\u003EMy Approach\u003C/strong\u003E\u003Cbr\u003EPractice, practice and more practice. Every section inside this course has a practice lecture at the end, reinforcing everything with went over in the lectures. I also created a small application the you will be able to download to help you practice PHP. To top it off, we will build and awesome CMS like WordPress, Joomla or Drupal.\u003C/p\u003E\u003Ch3\u003E\u003Cstrong\u003EWhat Will You Learn?\u003C/strong\u003E\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EUnderstand the fundamentals of healthy dieting (calories, protein, carbs, fat, vitamins &amp; minerals)\u003C/li\u003E\u003Cli\u003ECreate a diet that is perfect for your needs and lifestyle\u003C/li\u003E\u003Cli\u003ELearn when, what and how much you should eat for optimal body composition\u003C/li\u003E\u003Cli\u003EBuild more muscle by optimizing your meal plan\u003C/li\u003E\u003Cli\u003ELose fat faster by optimizing your meal plan\u003C/li\u003E\u003Cli\u003EImprove immunity and energy levels with the right vitamins and minerals\u003C/li\u003E\u003C/ul\u003E",
+        "author": "Mohammad Mozammel",
+        "category": "HTML",
+        "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocL3ygN9PPX1sPUPkMrrZtzvSk5N3R1WPM10dHwf3rrTuFUnK5iM4Q=s96-c",
+        "authorEmail": "mhfaryanemon@gmail.com",
+        "enrolled": 13
+    },
+    {
+        "_id": "666cc02d5d4ae6d98d694633",
+        "title": "Node",
+        "thumPhotoUrl": "https://img.freepik.com/free-photo/person-working-html-computer_23-2150038857.jpg?t=st=1728568069~exp=1728571669~hmac=f0ef414fd4096745b4d5ac262de0cc8f8244c031c50e3f7924279d4560247000&w=996",
+        "thumVideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "lave": "advance",
+        "price": "99",
+        "lessons": "5",
+        "duration": "10 Days",
+        "deadline": "20 Jun",
+        "milestone": "PHP Advance Concepts",
+        "milestoneList": [
+            {
+                "title": "Meal Planning Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Macronutrients Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Adjusting Your Diet To Build Muscle",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "HOW Much Fat Should You Consume Per Day",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Professional Ceramic Moulding",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            }
+        ],
+        "description": "\u003Cp\u003E\u003Cstrong\u003EAre you new to PHP or need a refresher?\u003C/strong\u003E&nbsp;Then this course will help you get all the fundamentals of Procedural PHP, Object Oriented PHP, MYSQLi and ending the course by building a CMS system similar to WordPress, Joomla or Drupal.\u003Cbr\u003E\u003Cstrong\u003EKnowing PHP has allowed me to make enough money to stay home and make courses like this one for students all over the world.\u003C/strong\u003E&nbsp;Being a PHP developer can allow anyone to make really good money online and offline, developing dynamic applications.\u003Cbr\u003EKnowing&nbsp;\u003Cstrong\u003EPHP&nbsp;\u003C/strong\u003Ewill allow you to build web applications, websites or Content Management systems, like WordPress, Facebook, Twitter or even Google.\u003Cbr\u003E\u003Cstrong\u003EThere is no limit to what you can do with this knowledge.\u003C/strong\u003E&nbsp;PHP is one of the most important web programming languages to learn, and knowing it, will give you&nbsp;\u003Cstrong\u003ESUPER POWERS\u003C/strong\u003E&nbsp;in the web development world and job market place.\u003Cbr\u003E\u003Cstrong\u003EWhy?\u003C/strong\u003E\u003Cbr\u003EBecause Millions of websites and applications (the majority) use PHP. You can find a job anywhere or even work on your own, online and in places like freelancer or Odesk. You can definitely make a substantial income once you learn it.\u003Cbr\u003E\u003Cstrong\u003EI will not bore you 🙂\u003C/strong\u003E\u003Cbr\u003EI take my courses very seriously but at the same time I try to make it fun since I know how difficult learning from an instructor with a monotone voice or boring attitude is. This course is fun, and when you need some energy to keep going, you will get it from me.\u003Cbr\u003E\u003Cstrong\u003EMy Approach\u003C/strong\u003E\u003Cbr\u003EPractice, practice and more practice. Every section inside this course has a practice lecture at the end, reinforcing everything with went over in the lectures. I also created a small application the you will be able to download to help you practice PHP. To top it off, we will build and awesome CMS like WordPress, Joomla or Drupal.\u003C/p\u003E\u003Ch3\u003E\u003Cstrong\u003EWhat Will You Learn?\u003C/strong\u003E\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EUnderstand the fundamentals of healthy dieting (calories, protein, carbs, fat, vitamins &amp; minerals)\u003C/li\u003E\u003Cli\u003ECreate a diet that is perfect for your needs and lifestyle\u003C/li\u003E\u003Cli\u003ELearn when, what and how much you should eat for optimal body composition\u003C/li\u003E\u003Cli\u003EBuild more muscle by optimizing your meal plan\u003C/li\u003E\u003Cli\u003ELose fat faster by optimizing your meal plan\u003C/li\u003E\u003Cli\u003EImprove immunity and energy levels with the right vitamins and minerals\u003C/li\u003E\u003C/ul\u003E",
+        "author": "Mohammad Mozammel",
+        "category": "Node",
+        "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocL3ygN9PPX1sPUPkMrrZtzvSk5N3R1WPM10dHwf3rrTuFUnK5iM4Q=s96-c",
+        "authorEmail": "mhfaryanemon@gmail.com",
+        "enrolled": 12
+    },
+    {
+        "_id": "666cc0365d4ae6d98d694634",
+        "title": "PHP",
+        "thumPhotoUrl": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901790.jpg?t=st=1728567741~exp=1728571341~hmac=ba5c5e55c3ae8a1874cf14d011b2326934062886a864f659f884ca162e2ec55f&w=1380",
+        "thumVideoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "lave": "advance",
+        "price": "99",
+        "lessons": "5",
+        "duration": "10 Days",
+        "deadline": "20 Jun",
+        "milestone": "PHP Advance Concepts",
+        "milestoneList": [
+            {
+                "title": "Meal Planning Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Macronutrients Explained",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Adjusting Your Diet To Build Muscle",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "HOW Much Fat Should You Consume Per Day",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            },
+            {
+                "title": "Professional Ceramic Moulding",
+                "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            }
+        ],
+        "description": "\u003Cp\u003E\u003Cstrong\u003EAre you new to PHP or need a refresher?\u003C/strong\u003E&nbsp;Then this course will help you get all the fundamentals of Procedural PHP, Object Oriented PHP, MYSQLi and ending the course by building a CMS system similar to WordPress, Joomla or Drupal.\u003Cbr\u003E\u003Cstrong\u003EKnowing PHP has allowed me to make enough money to stay home and make courses like this one for students all over the world.\u003C/strong\u003E&nbsp;Being a PHP developer can allow anyone to make really good money online and offline, developing dynamic applications.\u003Cbr\u003EKnowing&nbsp;\u003Cstrong\u003EPHP&nbsp;\u003C/strong\u003Ewill allow you to build web applications, websites or Content Management systems, like WordPress, Facebook, Twitter or even Google.\u003Cbr\u003E\u003Cstrong\u003EThere is no limit to what you can do with this knowledge.\u003C/strong\u003E&nbsp;PHP is one of the most important web programming languages to learn, and knowing it, will give you&nbsp;\u003Cstrong\u003ESUPER POWERS\u003C/strong\u003E&nbsp;in the web development world and job market place.\u003Cbr\u003E\u003Cstrong\u003EWhy?\u003C/strong\u003E\u003Cbr\u003EBecause Millions of websites and applications (the majority) use PHP. You can find a job anywhere or even work on your own, online and in places like freelancer or Odesk. You can definitely make a substantial income once you learn it.\u003Cbr\u003E\u003Cstrong\u003EI will not bore you 🙂\u003C/strong\u003E\u003Cbr\u003EI take my courses very seriously but at the same time I try to make it fun since I know how difficult learning from an instructor with a monotone voice or boring attitude is. This course is fun, and when you need some energy to keep going, you will get it from me.\u003Cbr\u003E\u003Cstrong\u003EMy Approach\u003C/strong\u003E\u003Cbr\u003EPractice, practice and more practice. Every section inside this course has a practice lecture at the end, reinforcing everything with went over in the lectures. I also created a small application the you will be able to download to help you practice PHP. To top it off, we will build and awesome CMS like WordPress, Joomla or Drupal.\u003C/p\u003E\u003Ch3\u003E\u003Cstrong\u003EWhat Will You Learn?\u003C/strong\u003E\u003C/h3\u003E\u003Cul\u003E\u003Cli\u003EUnderstand the fundamentals of healthy dieting (calories, protein, carbs, fat, vitamins &amp; minerals)\u003C/li\u003E\u003Cli\u003ECreate a diet that is perfect for your needs and lifestyle\u003C/li\u003E\u003Cli\u003ELearn when, what and how much you should eat for optimal body composition\u003C/li\u003E\u003Cli\u003EBuild more muscle by optimizing your meal plan\u003C/li\u003E\u003Cli\u003ELose fat faster by optimizing your meal plan\u003C/li\u003E\u003Cli\u003EImprove immunity and energy levels with the right vitamins and minerals\u003C/li\u003E\u003C/ul\u003E",
+        "author": "Mohammad Mozammel",
+        "category": "PHP",
+        "authorPhoto": "https://lh3.googleusercontent.com/a/ACg8ocL3ygN9PPX1sPUPkMrrZtzvSk5N3R1WPM10dHwf3rrTuFUnK5iM4Q=s96-c",
+        "authorEmail": "mhfaryanemon@gmail.com",
+        "enrolled": 12
+    }
+]
