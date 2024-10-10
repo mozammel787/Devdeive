@@ -38,7 +38,7 @@ const Footer = () => {
           <a className="text-base hover:text-primary">Blog</a>
           </div>
         </nav>
-        <nav className="w-[33%] pl-20 content-center ">
+        <nav className="w-[33%] pl-20 content-end ">
           <h6 className="text-4xl font-semibold mb-5">Contact Us</h6>
           <div className="flex  flex-col gap-4">
             <div className="flex justify-start items-center gap-3 text-lg font-medium ">

@@ -73,7 +73,7 @@ const Header = () => {
           </div>
           <div className="navbar-center w-[80%]">
             <div className=" hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
+              <ul className="menu menu-horizontal px-1 mx-auto">
                 <li>
                   <Link
                     className="font-medium text-base text-gray-700 hover:text-primary"
